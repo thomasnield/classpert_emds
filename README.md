@@ -17,9 +17,16 @@
     ```shell
     pip install -r requirements.txt 
     ```
+    
+4. To convert notebooks to HTML. 
+
+    ```
+    jupyter nbconvert classpert_hw_1.ipynb --to html
+    ```
 
 4. To purge and cleanup, delete the virtual environment.
 
     ```shell
     rm -rf .venv 
     ```
+
