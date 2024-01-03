@@ -40,3 +40,23 @@ FEEDBACK: The most scalable and stable way to fit a linear regression is using t
    b. False [correct answer]
 
 FEEDBACK: Just because you fit a linear regression to some data does not mean the model is going to perform well. There are other concerns like correlation, p-values, overfitting, and bias that have to be considered. 
+
+5. The raw output of a logistic regression is...
+
+   a. A binary output variable
+
+   b. A probability output variable [correct answer]
+
+   c. A real positive/negative floating point number
+
+   d. None of the above
+
+FEEDBACK: A logistic regression is going to strictly output a probability between 0 and 1. However, you can use that probability with a threshold to assign it a True/False or even a category. 
+
+6. True or false: A logistic regression only supports true/false categories and cannot extend to more categories.
+
+   a. True
+
+   b. False [correct answer]
+
+A logistic regression CAN be extended to support multiple categories, one way being to create a separate logistic regression for each category and choosing the one with the highest probability. 
