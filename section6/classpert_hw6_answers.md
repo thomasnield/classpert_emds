@@ -1,6 +1,6 @@
 # Homework 6
 
-1. Perform a train/test split (with 1/3 of the data as test) on this background color and light/dark font prediction dataset, as well as a confusion matrix using a logistic regresion. 
+1. Perform a train/test split on this background color and light/dark font prediction dataset using a logistic regresion. 
 
 
 ```python
@@ -21,11 +21,25 @@ Y = df.values[:, -1]
 
 model = LogisticRegression(solver='liblinear')
 
-# ===================
-# Create train/test split and confusion matrix here 
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=.33)
+model.fit(X_train, Y_train)
+prediction = model.predict(X_test)
 
-# ===================
+"""
+The confusion matrix evaluates accuracy within each category.
+[[truepositives falsenegatives]
+ [falsepositives truenegatives]]
+
+The diagonal represents correct predictions,
+so we want those to be higher
+"""
+matrix = confusion_matrix(y_true=Y_test, y_pred=prediction)
+print(matrix)
 ```
+
+    [[166   1]
+     [  1 276]]
+
 
 2.  You have decided to take on Stanley Tumblers and come up with your own tumbler that you believe will keep drinks cooler longer. You create two linear regressions, one for the Stanley Tumbler and one for yours. The x-axis is the environment temperature and the y-axis is the number of hours before reaching room temperature. You collected 60 data points off each tumbler. What are some confounding factors to consider and control for in this experiment when you compare the results? 
 
