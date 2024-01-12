@@ -42,9 +42,11 @@ X = df.values[:, :-1]
 # Extract output column (all rows, last column)
 Y = df.values[:, -1]
 
-model = LogisticRegression(solver='liblinear')
+# Fit a line to the points
+# Be sure to save the coefficients m and b to variables as well 
+# ==================================
 
-model.fit(X, Y)
+# ==================================
 
 # Test a prediction
 while True:

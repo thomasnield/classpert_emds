@@ -7565,9 +7565,11 @@ a.anchor-link {
 <span class="c1"># Extract output column (all rows, last column)</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s1">'liblinear'</span><span class="p">)</span>
+<span class="c1"># Fit a line to the points</span>
+<span class="c1"># Be sure to save the coefficients m and b to variables as well </span>
+<span class="c1"># ==================================</span>
 
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+<span class="c1"># ==================================</span>
 
 <span class="c1"># Test a prediction</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
